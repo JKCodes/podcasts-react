@@ -21213,15 +21213,25 @@ module.exports = function() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Featured = undefined;
+exports.Nav = exports.Footer = exports.Featured = undefined;
 
 var _Featured = __webpack_require__(33);
 
 var _Featured2 = _interopRequireDefault(_Featured);
 
+var _Footer = __webpack_require__(34);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+var _Nav = __webpack_require__(35);
+
+var _Nav2 = _interopRequireDefault(_Nav);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.Featured = _Featured2.default;
+exports.Footer = _Footer2.default;
+exports.Nav = _Nav2.default;
 
 /***/ }),
 /* 33 */
@@ -21243,6 +21253,10 @@ var _react2 = _interopRequireDefault(_react);
 var _Footer = __webpack_require__(34);
 
 var _Footer2 = _interopRequireDefault(_Footer);
+
+var _Nav = __webpack_require__(35);
+
+var _Nav2 = _interopRequireDefault(_Nav);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21394,377 +21408,7 @@ var Featured = function (_Component) {
           ),
           _react2.default.createElement(_Footer2.default, null)
         ),
-        _react2.default.createElement(
-          'div',
-          { className: 'menu-trigger z-depth-2' },
-          _react2.default.createElement(
-            'div',
-            { id: 'menu-icon' },
-            _react2.default.createElement('span', null),
-            _react2.default.createElement('span', null),
-            _react2.default.createElement('span', null),
-            _react2.default.createElement('span', null)
-          )
-        ),
-        _react2.default.createElement(
-          'nav',
-          { id: 'menu', className: 'menu' },
-          _react2.default.createElement(
-            'div',
-            { className: 'menu-navigation' },
-            _react2.default.createElement(
-              'ul',
-              { className: 'full-menu collapsible' },
-              _react2.default.createElement(
-                'li',
-                { className: 'menu-title' },
-                'Eclipse'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  { className: 'collapsible-header' },
-                  'Home'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'collapsible-body' },
-                  _react2.default.createElement(
-                    'ul',
-                    { className: 'collapsible' },
-                    _react2.default.createElement(
-                      'li',
-                      null,
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'index.html' },
-                        'ClassNameic'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'index-sliced.html' },
-                        'Sliced'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'index-slider.html' },
-                        'Slider'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'index-drawer.html' },
-                        'Drawer'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'index-walkthrough.html' },
-                        'Walkthrough'
-                      )
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  { className: 'collapsible-header' },
-                  'Pages'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'collapsible-body' },
-                  _react2.default.createElement(
-                    'ul',
-                    { className: 'collapsible' },
-                    _react2.default.createElement(
-                      'li',
-                      null,
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'profile.html' },
-                        'Profile'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'article.html' },
-                        'Article'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'event.html' },
-                        'Event'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'project.html' },
-                        'Project'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'player.html' },
-                        'Music Player'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'todo.html' },
-                        'ToDo'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'category.html' },
-                        'Category'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'product.html' },
-                        'Product'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'checkout.html' },
-                        'Checkout'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'search.html' },
-                        'Search'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'faq.html' },
-                        'Faq'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'coming-soon.html' },
-                        'Coming Soon'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: '404.html' },
-                        '404'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: '500.html' },
-                        '500'
-                      )
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  { className: 'collapsible-header' },
-                  'App'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'collapsible-body' },
-                  _react2.default.createElement(
-                    'ul',
-                    { className: 'collapsible' },
-                    _react2.default.createElement(
-                      'li',
-                      null,
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'calendar.html' },
-                        'Calendar'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'chat.html' },
-                        'Chat'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'chart.html' },
-                        'Chart'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'timeline.html' },
-                        'Timeline'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'login.html' },
-                        'Login'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'signup.html' },
-                        'Sign Up'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'lockscreen.html' },
-                        'Lockscreen'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'forgot.html' },
-                        'Password'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'notification.html' },
-                        'Notification'
-                      )
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  { className: 'collapsible-header' },
-                  'Portfolio'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'collapsible-body' },
-                  _react2.default.createElement(
-                    'ul',
-                    { className: 'collapsible' },
-                    _react2.default.createElement(
-                      'li',
-                      null,
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'portfolio-filter.html' },
-                        'Filter'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'portfolio-masonry.html' },
-                        'Masonry'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'portfolio-card.html' },
-                        'Card'
-                      )
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  { className: 'collapsible-header' },
-                  'Blog'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'collapsible-body' },
-                  _react2.default.createElement(
-                    'ul',
-                    { className: 'collapsible' },
-                    _react2.default.createElement(
-                      'li',
-                      null,
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'blog.html' },
-                        'ClassNameic'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'blog2.html' },
-                        'Card'
-                      )
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  { className: 'collapsible-header' },
-                  'Gallery'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'collapsible-body' },
-                  _react2.default.createElement(
-                    'ul',
-                    { className: 'collapsible' },
-                    _react2.default.createElement(
-                      'li',
-                      null,
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'gallery-filter.html' },
-                        'Filter'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'gallery-masonry.html' },
-                        'Masonry'
-                      ),
-                      _react2.default.createElement(
-                        'a',
-                        { href: 'gallery-card.html' },
-                        'Card'
-                      )
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'a',
-                  { href: 'shop.html', className: 'no-child' },
-                  'Shop'
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'a',
-                  { href: 'news.html', className: 'no-child' },
-                  'News'
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'a',
-                  { href: 'video.html', className: 'no-child' },
-                  'Video'
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'a',
-                  { href: 'contact.html', className: 'no-child' },
-                  'Contact'
-                )
-              )
-            )
-          )
-        )
+        _react2.default.createElement(_Nav2.default, null)
       );
     }
   }]);
@@ -21832,6 +21476,402 @@ exports.default = function (props) {
           "a",
           { className: "grey-text text-lighten-4 right", href: "#!" },
           "Privacy Policy"
+        )
+      )
+    )
+  );
+};
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(6);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (props) {
+
+  return _react2.default.createElement(
+    "div",
+    null,
+    _react2.default.createElement(
+      "div",
+      { className: "menu-trigger z-depth-2" },
+      _react2.default.createElement(
+        "div",
+        { id: "menu-icon" },
+        _react2.default.createElement("span", null),
+        _react2.default.createElement("span", null),
+        _react2.default.createElement("span", null),
+        _react2.default.createElement("span", null)
+      )
+    ),
+    _react2.default.createElement(
+      "nav",
+      { id: "menu", className: "menu" },
+      _react2.default.createElement(
+        "div",
+        { className: "menu-navigation" },
+        _react2.default.createElement(
+          "ul",
+          { className: "full-menu collapsible" },
+          _react2.default.createElement(
+            "li",
+            { className: "menu-title" },
+            "Eclipse"
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "div",
+              { className: "collapsible-header" },
+              "Home"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "collapsible-body" },
+              _react2.default.createElement(
+                "ul",
+                { className: "collapsible" },
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "index.html" },
+                    "ClassNameic"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "index-sliced.html" },
+                    "Sliced"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "index-slider.html" },
+                    "Slider"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "index-drawer.html" },
+                    "Drawer"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "index-walkthrough.html" },
+                    "Walkthrough"
+                  )
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "div",
+              { className: "collapsible-header" },
+              "Pages"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "collapsible-body" },
+              _react2.default.createElement(
+                "ul",
+                { className: "collapsible" },
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "profile.html" },
+                    "Profile"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "article.html" },
+                    "Article"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "event.html" },
+                    "Event"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "project.html" },
+                    "Project"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "player.html" },
+                    "Music Player"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "todo.html" },
+                    "ToDo"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "category.html" },
+                    "Category"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "product.html" },
+                    "Product"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "checkout.html" },
+                    "Checkout"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "search.html" },
+                    "Search"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "faq.html" },
+                    "Faq"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "coming-soon.html" },
+                    "Coming Soon"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "404.html" },
+                    "404"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "500.html" },
+                    "500"
+                  )
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "div",
+              { className: "collapsible-header" },
+              "App"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "collapsible-body" },
+              _react2.default.createElement(
+                "ul",
+                { className: "collapsible" },
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "calendar.html" },
+                    "Calendar"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "chat.html" },
+                    "Chat"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "chart.html" },
+                    "Chart"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "timeline.html" },
+                    "Timeline"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "login.html" },
+                    "Login"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "signup.html" },
+                    "Sign Up"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "lockscreen.html" },
+                    "Lockscreen"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "forgot.html" },
+                    "Password"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "notification.html" },
+                    "Notification"
+                  )
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "div",
+              { className: "collapsible-header" },
+              "Portfolio"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "collapsible-body" },
+              _react2.default.createElement(
+                "ul",
+                { className: "collapsible" },
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "portfolio-filter.html" },
+                    "Filter"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "portfolio-masonry.html" },
+                    "Masonry"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "portfolio-card.html" },
+                    "Card"
+                  )
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "div",
+              { className: "collapsible-header" },
+              "Blog"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "collapsible-body" },
+              _react2.default.createElement(
+                "ul",
+                { className: "collapsible" },
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "blog.html" },
+                    "ClassNameic"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "blog2.html" },
+                    "Card"
+                  )
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "div",
+              { className: "collapsible-header" },
+              "Gallery"
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "collapsible-body" },
+              _react2.default.createElement(
+                "ul",
+                { className: "collapsible" },
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  _react2.default.createElement(
+                    "a",
+                    { href: "gallery-filter.html" },
+                    "Filter"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "gallery-masonry.html" },
+                    "Masonry"
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { href: "gallery-card.html" },
+                    "Card"
+                  )
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "a",
+              { href: "shop.html", className: "no-child" },
+              "Shop"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "a",
+              { href: "news.html", className: "no-child" },
+              "News"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "a",
+              { href: "video.html", className: "no-child" },
+              "Video"
+            )
+          ),
+          _react2.default.createElement(
+            "li",
+            null,
+            _react2.default.createElement(
+              "a",
+              { href: "contact.html", className: "no-child" },
+              "Contact"
+            )
+          )
         )
       )
     )
