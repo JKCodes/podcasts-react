@@ -12,6 +12,14 @@ class Featured extends Component {
             <h1 className="hero-title">Shop</h1>
           </div>
 
+          <div className="form-inputs p-20">
+            <div>
+              <div className="input-field animated fadeinright">
+                <input placeholder="Search..." type="text" className="validate" />
+              </div>
+            </div>        
+          </div>
+
           <div className="animated fadeinup delay-1">
             <Podcasts />
             
