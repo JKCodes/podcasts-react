@@ -68,6 +68,18 @@ class Playlist extends Component {
     })
   }
 
+  componentDidUpdate() {
+    if (this.props.podcasts.selected == null)
+      return
+
+    const feedUrl = this.props.podcasts.selected['feedUrl']
+
+    if (feedUrl == null)
+      return
+
+    console.log(feedUrl)
+  }
+
   render() {
 
     return ( 
