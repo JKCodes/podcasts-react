@@ -109,9 +109,9 @@ class Playlist extends Component {
       let list = []
       item.forEach((track, i) => {
         let trackInfo = {}
-        trackInfo['title'] = 'Track ' + i
-        trackInfo['author'] = 'Test'
-        trackInfo['pic'] = ''
+        trackInfo['title'] = track.title[0]
+        trackInfo['author'] = this.props.podcasts.selected.collectionName
+        trackInfo['pic'] = this.props.podcasts.selected['artworkUrl600']
         trackInfo['url'] = 'Track ' + i
         
         let enclosure = track.enclosure[0]['$']
