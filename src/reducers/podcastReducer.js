@@ -1,7 +1,7 @@
 import constants from '../constants'
 
 var initialState = {
-
+  all: null
 }
 
 export default (state = initialState, action) => {
@@ -11,6 +11,7 @@ export default (state = initialState, action) => {
   switch (action.type) {
 
     case constants.PODCASTS_RECEIVED:
+      updated['all'] = action.podcasts
       return updated
 
     default:
