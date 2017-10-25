@@ -16,6 +16,11 @@ export default (state = initialState, action) => {
       return updated
 
     case constants.PODCAST_SELECTED:
+      if (updated.selected != null) {
+        if (updated.selected.collectionId == action.podcast.collectionId)
+          return state
+      }
+
       updated['selected'] = action.podcast
       return updated
 
