@@ -31,6 +31,7 @@ router.get('/', function(req, res, next) {
     xml2js.parseString(xml, function(err, result) {
       var rss = result.rss
       var channel = rss.channel
+
       if (channel.length > 0)
         channel = channel[0]
 

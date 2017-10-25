@@ -7,6 +7,13 @@ import APlayer from 'aplayer'
 
 class Playlist extends Component {
 
+  constructor() {
+    super()
+    this.state = {
+      trackList: []
+    }
+  }
+
   componentDidMount() {
     var ap1 = new APlayer({
       element: document.getElementById('player1'),
@@ -77,7 +84,35 @@ class Playlist extends Component {
     if (feedUrl == null)
       return
 
-    console.log(feedUrl)
+    APIClient
+    .get('/feed', {url: feedUrl})
+    .then(response => {
+      const podcast = response.podcast
+      const item = podcast.item
+
+      console.log(response)
+      let list = []
+      item.forEach((track, i) => {
+        let trackInfo = {}
+        trackInfo['title'] = 'Track ' + i
+        trackInfo['author'] = 'Test'
+        trackInfo['pic'] = ''
+        trackInfo['url'] = 'Track ' + i
+        
+        let enclosure = track.enclosure[0]['$']
+        trackInfo['url'] = enclosure['url']
+        list.push(trackInfo)
+      })
+
+      this.setState({
+        trackList: list
+      })
+
+      console.log(trackList)
+    })
+    .catch(error => {
+      console.log('ERROR: ' + JSON.stringify(error))
+    })
   }
 
   render() {
