@@ -4,6 +4,11 @@ import actions from '../../actions'
 
 class Podcasts extends Component {
 
+  selectPodcast(podcast, event) {
+    event.preventDefault()
+    this.props.podcastSelected(podcast)
+  }
+
   render() {
     const list = this.props.podcasts.all || []
 
@@ -12,7 +17,7 @@ class Podcasts extends Component {
         { list.map((podcast, i) => {
             return (
               <div key={i} className="shop-banner animated fadeinup delay-2">
-                <a href="#">
+                <a onClick={this.selectPodcast.bind(this, podcast)} href="#">
                   <img src={podcast.artworkUrl600} alt="" />
                   <div className="opacity-overlay valign-wrapper">
                     <div className="valign center width-100">
@@ -35,4 +40,10 @@ const stateToProps = (state) => {
   }
 }
 
-export default connect(stateToProps)(Podcasts)
+const dispatchToProps = (dispatch) => {
+  return {
+    podcastSelected: (podcast) => dispatch(actions.podcastSelected(podcast))
+  }
+}
+
+export default connect(stateToProps, dispatchToProps)(Podcasts)
