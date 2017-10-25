@@ -10,11 +10,27 @@ class Playlist extends Component {
   constructor() {
     super()
     this.state = {
-      trackList: []
+      trackList: null,
+      player: null
     }
   }
 
   componentDidMount() {
+    
+  }
+
+  initializePlayer(list) {
+    let sublist = []
+ 
+    if (list.length > 3) {
+      for (var i = 0; i < 3; i++) {
+        sublist.push(list[i])
+      }
+    } else {
+      sublist = Object.assign([], list)
+    }
+
+
     var ap1 = new APlayer({
       element: document.getElementById('player1'),
       narrow: false,
@@ -24,15 +40,7 @@ class Playlist extends Component {
       theme: '#e6d0b2',
       preload: 'metadata',
       mode: 'circulation',
-      music: [
-        {
-          title: 'Preparation',
-          author: 'Hans Zimmer/Richard Harvey',
-          url: 'http://devtest.qiniudn.com/Preparation.mp3',
-          pic: 'http://devtest.qiniudn.com/Preparation.jpg'
-        }
-      ]
-      
+      music: sublist
     })
 
     // ap1.on('play', function () {
@@ -56,6 +64,11 @@ class Playlist extends Component {
     // ap1.on('error', function () {
     //     console.log('error');
     // });
+
+    this.setState({
+      player: ap1,
+      trackList: list
+    })
   }
 
   searchPodcasts(event) {
@@ -84,13 +97,15 @@ class Playlist extends Component {
     if (feedUrl == null)
       return
 
+    if (this.state.trackList != null)
+      return
+
     APIClient
     .get('/feed', {url: feedUrl})
     .then(response => {
       const podcast = response.podcast
       const item = podcast.item
 
-      console.log(response)
       let list = []
       item.forEach((track, i) => {
         let trackInfo = {}
@@ -104,11 +119,11 @@ class Playlist extends Component {
         list.push(trackInfo)
       })
 
-      this.setState({
-        trackList: list
-      })
+      console.log(list)
 
-      console.log(trackList)
+      if (this.state.player == null) {
+        this.initializePlayer(list)
+      }
     })
     .catch(error => {
       console.log('ERROR: ' + JSON.stringify(error))
