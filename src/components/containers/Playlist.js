@@ -1,7 +1,25 @@
 import React, { Component } from 'react'
 import { Search } from '../presentation'
+import { APIClient } from '../../utils'
 
 class Playlist extends Component {
+
+  searchPodcasts(event) {
+
+    if (event.keyCode != 13)
+      return
+
+    const endpoint = '/search/' + event.target.value
+
+    APIClient
+    .get(endpoint, null)
+    .then(response => {
+      console.log(JSON.stringify(response))
+    })
+    .catch(error => {
+      console.log('ERROR: ' + JSON.stringify(error))
+    })
+  }
 
   render() {
 
@@ -11,7 +29,7 @@ class Playlist extends Component {
           <h1 className="hero-title">Playlist</h1>
         </div>
   
-        <Search />
+        <Search onSearch={this.searchPodcasts.bind(this)}/>
       </div>
     )
   }
