@@ -21,8 +21,8 @@ class Playlist extends Component {
   initializePlayer(list) {
     let sublist = []
  
-    if (list.length > 3) {
-      for (var i = 0; i < 3; i++) {
+    if (list.length > 30) {
+      for (var i = 0; i < 30; i++) {
         sublist.push(list[i])
       }
     } else {
