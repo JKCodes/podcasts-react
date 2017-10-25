@@ -23,25 +23,7 @@ class Playlist extends Component {
           author: 'Hans Zimmer/Richard Harvey',
           url: 'http://devtest.qiniudn.com/Preparation.mp3',
           pic: 'http://devtest.qiniudn.com/Preparation.jpg'
-        },
-        {
-          title: 'Preparation',
-          author: 'Hans Zimmer/Richard Harvey',
-          url: 'http://devtest.qiniudn.com/Preparation.mp3',
-          pic: 'http://devtest.qiniudn.com/Preparation.jpg'
-        },
-        {
-          title: 'Preparation',
-          author: 'Hans Zimmer/Richard Harvey',
-          url: 'http://devtest.qiniudn.com/Preparation.mp3',
-          pic: 'http://devtest.qiniudn.com/Preparation.jpg'
-        },
-        {
-          title: 'Preparation',
-          author: 'Hans Zimmer/Richard Harvey',
-          url: 'http://devtest.qiniudn.com/Preparation.mp3',
-          pic: 'http://devtest.qiniudn.com/Preparation.jpg'
-        },
+        }
       ]
       
     })
