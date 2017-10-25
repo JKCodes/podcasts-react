@@ -61,7 +61,6 @@ class Playlist extends Component {
     APIClient
     .get(endpoint, null)
     .then(response => {
-      console.log(JSON.stringify(response))
       this.props.podcastsReceived(response.results)
     })
     .catch(error => {
