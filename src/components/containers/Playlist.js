@@ -10,7 +10,6 @@ class Playlist extends Component {
   constructor() {
     super()
     this.state = {
-      trackList: null,
       player: null
     }
   }
@@ -66,8 +65,7 @@ class Playlist extends Component {
     // });
 
     this.setState({
-      player: ap1,
-      trackList: list
+      player: ap1
     })
   }
 
@@ -97,8 +95,19 @@ class Playlist extends Component {
     if (feedUrl == null)
       return
 
-    if (this.state.trackList != null)
+    if (this.props.podcasts.tracklist != null) {
+      if (this.state.player == null)
+        this.initializePlayer(this.props.podcasts.tracklist)
+
       return
+    }
+
+    if (this.state.player != null) {
+      this.state.player.pause()
+      this.setState({
+        player: null
+      })
+    }
 
     APIClient
     .get('/feed', {url: feedUrl})
@@ -119,14 +128,12 @@ class Playlist extends Component {
         list.push(trackInfo)
       })
 
-      console.log(list)
+      // console.log(list)
 
-      if (this.state.player == null) {
-        this.initializePlayer(list)
-      }
+      this.props.trackListReady(list)
     })
     .catch(error => {
-      console.log('ERROR: ' + JSON.stringify(error))
+      console.log('ERROR: ' + error.message)
     })
   }
 
@@ -155,7 +162,8 @@ const stateToProps = (state) => {
 
 const dispatchToProps = (dispatch) => {
   return {
-    podcastsReceived: (podcasts) => dispatch(actions.podcastsReceived(podcasts))
+    podcastsReceived: (podcasts) => dispatch(actions.podcastsReceived(podcasts)),
+    trackListReady: (list) => dispatch(actions.trackListReady(list))
   }
 }
 

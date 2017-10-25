@@ -20,5 +20,12 @@ export default {
       type: constants.PODCASTS_RECEIVED,
       podcasts: podcasts
     }
+  },
+
+  trackListReady: (list) => {
+    return {
+      type: constants.TRACKLIST_READY,
+      list: list
+    }
   }
 }
