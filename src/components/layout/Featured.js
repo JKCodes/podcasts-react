@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Footer, Nav, Search } from '../presentation'
+import { Footer, Nav } from '../presentation'
 import { Podcasts, Playlist } from '../containers'
 
 class Featured extends Component {
