@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Footer, Nav } from '../presentation'
+import { Footer, Nav, Search } from '../presentation'
 import { Podcasts } from '../containers'
 
 class Featured extends Component {
@@ -12,13 +12,7 @@ class Featured extends Component {
             <h1 className="hero-title">Shop</h1>
           </div>
 
-          <div className="form-inputs p-20">
-            <div>
-              <div className="input-field animated fadeinright">
-                <input placeholder="Search..." type="text" className="validate" />
-              </div>
-            </div>        
-          </div>
+          <Search />
 
           <div className="animated fadeinup delay-1">
             <Podcasts />
