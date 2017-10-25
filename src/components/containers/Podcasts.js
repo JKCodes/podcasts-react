@@ -6,6 +6,8 @@ class Podcasts extends Component {
 
   selectPodcast(podcast, event) {
     event.preventDefault()
+    window.scrollTo(0, 0)
+
     this.props.podcastSelected(podcast)
   }
 
