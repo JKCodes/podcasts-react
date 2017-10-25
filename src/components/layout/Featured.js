@@ -11,8 +11,6 @@ class Featured extends Component {
           
           <Playlist />
 
-          <Search />
-
           <div className="animated fadeinup delay-1">
             <Podcasts />
             
