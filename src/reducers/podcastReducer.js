@@ -4,10 +4,11 @@ var initialState = {
 
 }
 
-export default (staet = initialState, action) => {
+export default (state = initialState, action) => {
+
+  let updated = Object.assign({}, state)
 
   switch (action.type) {
-    let updated = Object.assign({}, state)
 
     case constants.PODCASTS_RECEIVED:
       return updated

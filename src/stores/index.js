@@ -10,10 +10,10 @@ export default {
       podcast: podcastReducer
     })
 
-    store = createStore({
+    store = createStore(
       reducers,
       applyMiddleware(thunk)
-    })
+    )
 
     return store
   },
