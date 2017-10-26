@@ -128,8 +128,6 @@ class Playlist extends Component {
         list.push(trackInfo)
       })
 
-      console.log(list)
-
       this.props.trackListReady(list)
     })
     .catch(error => {

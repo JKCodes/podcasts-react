@@ -24099,8 +24099,6 @@ var Playlist = function (_Component) {
           list.push(trackInfo);
         });
 
-        console.log(list);
-
         _this3.props.trackListReady(list);
       }).catch(function (error) {
         console.log('ERROR: ' + error.message);
