@@ -17,7 +17,8 @@ router.get('/', function(req, res, next) {
   .get(url)
   .query(null)
   .end(function(err, response) {
-    if (err) {
+
+    if (err && err.response.status > 400) {
       res.json({
         confirmation: 'fail',
         message: err
@@ -26,7 +27,11 @@ router.get('/', function(req, res, next) {
       return
     }
 
+    console.log(err.response)
+    console.log(response)
     var xml = response.text
+
+    console.log(xml)
 
     xml2js.parseString(xml, function(err, result) {
       var rss = result.rss

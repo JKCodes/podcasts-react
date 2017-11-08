@@ -24188,7 +24188,7 @@ module.exports = {
 
   get: function get(endpoint, params) {
     return new Promise(function (resolve, reject) {
-      _superagent2.default.get(endpoint).query(params).set('Accept', 'applicatin/json').end(function (error, response) {
+      _superagent2.default.get(endpoint).query(params).set('Accept', 'application/json').end(function (error, response) {
         if (error) {
           reject(error);
           return;

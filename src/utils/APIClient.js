@@ -8,7 +8,7 @@ module.exports = {
       superagent
       .get(endpoint)
       .query(params)
-      .set('Accept', 'applicatin/json')
+      .set('Accept', 'application/json')
       .end((error, response) =>{
         if (error) {
           reject(error)
